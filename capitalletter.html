@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+<head>
+</head>
+<body>
+<script>
+function UpperCase(str)
+{
+var array1=str.split(' ');
+var newarray1=[];
+for(var x=0; x<array1.length; x++)
+{
+newarray1.push(array1[x]).chartAt(0).toUpperCase()+array1[x].splice(1);
+}
+
+return newarray1.join(' ');
+}
+document.write(upperCase("the quick brown fox"));
+</script>
+</body>
+</html>

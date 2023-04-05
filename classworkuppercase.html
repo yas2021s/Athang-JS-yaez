@@ -1,0 +1,17 @@
+<!doctype html>
+<html>
+<head></head>
+<body>
+<script>
+var str=prompt("enter your strings");
+  var array1=str.split(' ');
+   var newarray1=[];
+   for(var x=0; x < array1.length; x++)
+   {
+      newarray1.push(array1[x].charAt(0).toUpperCase()+array1[x].slice(1));
+   }
+document.write(newarray1.join(' '));
+	
+</script>
+</body>
+</html>

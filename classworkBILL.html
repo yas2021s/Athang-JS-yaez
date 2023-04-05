@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>classwork bill</title>
+</head>
+<body>
+<form>
+<table border="1" cellpadding="6" cellspacing="4">
+<tr>
+<th>Item_name</th>
+<th>rate</th>
+<th>quantity</th>
+</tr>
+<tr>
+<td>samyang</td>
+<td>90</td>
+<td><input type="number" id="sam"></td>
+</tr>
+<tr>
+<td>ramen</td>
+<td>70</td>
+<td><input type="number" id="ram"></td>
+</tr>
+<tr>
+<td>cake</td>
+<td>85</td>
+<td><input type="number" id="cake"></td>
+</tr>
+</table>
+<input type="button" value="Total Cost"  onclick="totalCost()">
+<input type="text" id="cost" size="4" onfocus="this.blur()"> <br><br>
+<input type="submit" value="submit">
+<script>
+function totalCost()
+{
+var sam=document.getElementById("sam").value;
+var ram=document.getElementById("ram").value;
+var cake=document.getElementById("cake").value;
+
+document.getElementById("cost").value=sam*90+ram*70+cake*85;
+}
+</script>
+</form>
+</body>
+</html>

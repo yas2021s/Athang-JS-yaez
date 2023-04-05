@@ -1,0 +1,18 @@
+<!doctype html>
+<html>
+<head>
+<title>capitalassign</title>
+</head>
+<body>
+<script>
+
+ function capitalize(word)
+ {
+ return word.split(' ').map(x => x.charAt(0).toUpperCase()+ x.substring(1)).
+ join (' ');
+ }
+ document.write(capitalize("the quick brown fox"));
+ 
+</script>
+</body>
+</html>

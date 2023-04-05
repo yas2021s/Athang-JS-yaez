@@ -1,0 +1,74 @@
+ <!doctype html>
+<html>
+<head>
+<title>Form validation</title>
+
+</head>
+<fieldset>
+<body>
+	<form name="myForm" id="myForm" action="" onsubmit="return validation()"> 
+<lable>First Name</lable>
+<input type="text" name="name"id="name"> 
+<br><br>
+
+<lable>Last Name</lable>
+<input type="text" name="name" id="name">
+<br>
+<br>
+<lable>Email</lable>
+<input type="email" name="email" id="email">
+<br>
+<br>
+<lable>Phone</lable>
+<input type="phone" name="cont" id="cont">
+<br>
+<br>
+<lable>address</lable>
+ <textarea></textarea>
+
+<br>
+<br>
+
+<lable>country:</lable>
+<select name="country" id="country">
+<option>bhutan</option>
+<option>india</option>
+<option>nepal</option>
+<option>bangladesh</option>
+
+
+
+<lable>submit</lable>
+<input type="submit" name="submit" value="submit">
+
+</form>
+
+<script type="text/javascript">
+function return validation() {
+	var name=document.forms["myForm"]["name"].value;
+	var fullname=name.split(' ');
+	var fname=fullname[0];
+	var student=document.forms["myForm"]["student"].value;
+	var email=document.forms["myForm"]["email"].value;
+ if(name=="" || !isNaN(name))
+  {
+	alert("Please Enter Your Name and it Should not be number");
+	return false;
+  }
+else if(student=="" ||isNaN(student))
+  {
+	alert("Please enter your student number.It should be number");
+	return false;
+  }
+  else if(email=="")
+  {
+	alert("Please enter your EMail");
+	return false;
+  
+}
+
+
+}
+</script>
+</body>
+</html>

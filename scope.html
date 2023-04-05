@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>name</title>
+</head>
+<body>
+<p>webpage</p>
+<p id="name"></p>
+<p id="const"></p>
+<p id="gay"></p>
+<script type="text/javascript">
+
+
+//var=redefine and overwrite
+var person={firstname:"yaez",
+lastname:"lhamo",
+age:20};
+document.getElementById("name").innerHTML=person.firstname;
+
+
+// const= it cannot be redefine and overwrite
+const name={firstname:"yaez",
+lastname:"lhamo",
+age:20};
+document.getElementById("const").innerHTML=name.lastname;
+
+//let= it can't redefine but overwrite.
+let age={firstname:"yaez",
+lastname:"lhamo",
+age:20};
+document.getElementById("gay").innerHTML=age.age;
+
+</script>
+</body>
+</html>

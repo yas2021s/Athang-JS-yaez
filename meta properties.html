@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<TITLE>META PROPERTIES</TITLE>
+</head>
+<body>
+<script>
+ var string="Pashi contact number is 1011011010. His age is 35.Apple,Pineappple plum";
+	 string +="Dema contact number is 8912398912.His age is 45 RegExp. foo, bar, baz ";
+	 
+//Using Meta Character;
+//Using regExp constructor;
+//var reg=new RegExp("\.","g");
+//var reg=new RegExp("\\s","g");
+//var reg=new RegExp("\\S","g");
+//var reg=new RegExp("\\d","g");
+//var reg=new RegExp("\\D","g");
+//var reg=new RegExp("\\w","g");
+//var reg=new RegExp("\\W","g");
+//var reg=new RegExp("[aeiou]","g");
+//var reg=new RegExp("[^aeiou]","g");
+//var reg=new RegExp("(foo|bar|baz)","g");
+
+//document.write(string.match(reg));
+
+//Using regExliteral;
+
+var regExliteral=/[\b]/g; // Search by Ma'am ?.
+
+//document.write(string.match(regExliteral));
+
+
+document.write(string.match(/\D+/g));
+
+
+//document.write(string.replace(/\D+/g, "xxxx"));
+
+
+//document.write(string.split(/\D+/g));
+
+
+//document.write(string.search(/\d+/g));
+
+</script>
+</body>
+</html>

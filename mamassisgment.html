@@ -1,0 +1,238 @@
+<DOCTYPE html> 
+<html>
+<head>
+<title>Quiz
+</title>
+	<link rel="stylesheet" href="style.css" type="text/css">
+	
+</head>
+<body>
+	<div class="container">
+		<header>
+			<h1>Welcome To The Simple Quiz</h1>
+			<p> Test your Knowledge</p>
+		</header><br></br>
+	<form name="myForm" id="myForm" action="" onsubmit="return submitAnswer();"> 
+		<table>
+			<tr>
+				<td align="right">Name</td>
+				 <td border="1px"><input type="text" name="name" id="name"></td>
+			 </tr>
+			 <tr>
+				<td align="right">Student no</td>
+				 <td border="1px"><input type="text" name="student" id="student"></td>
+			 </tr>
+			 <tr>
+				<td align="right">EMail</td>
+				 <td border="1px"><input type="email" name="email" id="email"></td>
+			 </tr>
+			 <tr>
+				<td align="right">Semester:</td>
+				<td border="1px">
+					<select name="Semster" id="semster">
+					<option value="-1">Choose your semester</option>
+					<option value="0">Year I, Semester I</option>
+					<option value="1">Year I, Semester II</option>
+					<option value="2">Year II, Semester I</option>
+					<option value="3">Year II, Semester II</option>
+					<option value="4">Year III, Semester I</option>
+					<option value="5">Year III, Semester II</option>
+					</select></td>
+			</tr>
+		 </table><br><br>
+		 <h2>True or false</h2>
+		 <h2>tick the checked box if the answer is true and of it is false the you don't need to tick</h2>
+		 <h3>1. HTML is neccesary because the broswer can only understand HTML.
+		 <label><input type="checkbox" name="q1" id="q1" value="true" /></label></h3>
+		  <h3>2. style attribute is used to define an inline styles.
+		  
+		 <label><input type="checkbox" name="q2" id="q2" value="true" /></label></h3>
+		 
+		  <h3>3. You cannot make each word in a text start with a capital letter. 
+		  
+		 <label><input type="checkbox" name="q3" id="q3" value="true" /></label></h3>
+		 
+		<h2> Multiple Choice Question</h1>
+
+		<h3>4. Which is the correct CSS syntax?</h3>
+
+		<label><input type="radio" name="q4" value="a" id="q4" />a. body{color:black;}.</label></label><br>
+		<label><input type="radio" name="q4" value="b" id="q4" />b. {body;color:black}</label></label><br>
+		<label><input type="radio" name="q4" value="c" id="q4" />c. body:color=black;</label></label><br>
+		<label><input type="radio" name="q4" value="d" id="q4"/>d. {body:color=black;}</label>
+
+		<h2>5. What is the defalut value of the position property?</h2>
+
+		<label><input type="radio" name="q5" value="a" id="q5"/>a. relative</label></label><br>
+		<label><input type="radio" name="q5" value="b" id="q5"/>b. absolute</label></label><br>
+		<label><input type="radio" name="q5" value="c" id="q5" />c. static</label></label><br>
+		<label><input type="radio" name="q5" value="d" id="q5" />d. fixed</label>
+
+		<h2>Fill in the blank</h2>
+
+		<h3>6. CSS property that used to control text size is 
+
+		<label><input type="text" name="q6" id="q6" /></label></h3>
+
+		<h3>7. how can you select elements with class name 'test'?
+
+		<label><input type="text" name="q7" id="q7" /></label></h3>
+
+		<h3>8. The result of 3+2+"7" is
+
+		<label><input type="text" name="q8" id="q8" /></label></h3>
+
+		<input type = "submit" name="submit" value = "Submit for grading"/>
+
+	</form>
+	<div class="result">
+
+	<br></br><textarea name="textarea" cols="100" rows="5" id="result"></textarea>
+
+	<div>
+
+	</div>
+
+<script>
+function submitAnswer() 
+{
+	var score=0;
+	var total=8;
+	var name=document.forms["myForm"]["name"].value;
+	var fullname=name.split(' ');
+	var fname=fullname[0];
+	var student=document.forms["myForm"]["student"].value;
+	var email=document.forms["myForm"]["email"].value;
+	var semster=document.forms["myForm"]["semster"].value;
+	var q4=document.forms["myForm"]["q4"].value;
+    var q5=document.forms["myForm"]["q5"].value;
+	var q6=document.forms["myForm"]["q6"].value;
+	var q7=document.forms["myForm"]["q7"].value;
+	var q8=document.forms["myForm"]["q8"].value;
+  if(name=="" || !isNaN(name))
+  {
+	alert("Please Enter Your Name and it Should not be number");
+	return false;
+  }
+else if(student=="" ||isNaN(student))
+  {
+	alert("Please enter your student number. It should be number");
+	return false;
+  }
+  else if(email=="")
+  {
+	alert("Please enter your EManil");
+	return false;
+  }
+  else if(semster==-1)
+  {
+	alert("Please select your semester");
+	return false;
+  }
+    var q1;
+  if(document.forms["myForm"]["q1"].checked)
+  {
+	  q1=document.forms["myForm"]["q1"].value;
+  }
+  else
+  {
+	  q1="false";
+	  alert("Your didn't checked the checkbox for question 1. So, answer will be set to false by Defalut");
+  }
+  var q2;
+   if(document.forms["myForm"]["q2"].checked)
+  {
+	  q2=document.forms["myForm"]["q2"].value;
+  }
+  else
+  {
+	  q2="false";
+		  alert("Your didn't checked the checkbox for question 2. So, answer will be set to false by Defalut");
+  }
+	var q3;
+   if(document.forms["myForm"]["q3"].checked)
+  {
+	  q3=document.forms["myForm"]["q3"].value;
+  }
+  else
+  {
+	  q3="false";
+		alert("Your didn't checked the checkbox for question 3. So, answer will be set to false by Defalut");
+  }
+   if(q4=='')
+  {
+	  alert("You missed Question 4");
+	  return false;
+  }
+  else if(q5=='')
+  {
+	  alert("You missed Question 5");
+	  return false;
+  }
+  else if(q6=="")
+  {
+	  alert("You missed Question 6");
+	  return false;
+  }
+  else if(q7=='')
+  {
+	  alert("You missed Question 7");
+	  return false;
+  }
+  else if(q8=='')
+  {
+	  alert("You missed Question 8");
+	  return false;
+  }
+  var answer=["true","true","false","a","c","font-size",".test","57"];
+    if(q1==answer[0])
+  {
+	  score++;
+  }
+    if(q2==answer[1])
+  {
+	  score++;
+  }
+    if(q3==answer[2])
+  {
+	  score++;
+  }
+  if(q4==answer[3])
+  {
+	  score++;
+  }
+  if(q5==answer[4])
+  {
+	  score++;
+  }
+  if(q6.toLowerCase()==answer[5].toLowerCase())
+  {
+	  score++;
+  }
+   if(q7.toLowerCase()==answer[6].toLowerCase())
+  {
+	  score++;
+  }
+   if(q8.toLowerCase()==answer[7].toLowerCase())
+  {
+	  score++;
+  }
+	var results=document.getElementById('result');
+	if( score>=6) 
+	{
+		results.innerHTML= 'Well done '+fname+'. You got '+score+' out of '+total+'correct';
+	}
+	else if( score>=3)
+	{
+		results.innerHTML= "Keep trying "+fname+". You answered "+score+" out of "+total+" correctly";
+	}
+	else if( score>=0)
+	{
+		results.innerHTML= "Do not give up. You can do it, "+fname+". You got "+score+" out of "+total+" okay.";
+	}
+	return false;
+}
+
+</script>
+</body>
+</html>

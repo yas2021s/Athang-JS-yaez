@@ -1,0 +1,102 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>practice</title>
+</head>
+<button onclick="alertt()">alert</button>
+<button onclick="promt()">promt</button>
+<button onclick="confrm()">confirm</button>
+<button onclick="fact()">factorial</button>
+<button onclick="cal()">calculation</button>
+<body>
+<script>
+
+function confrm()
+{
+if (confirm("do you want to confirm yet"))
+
+
+{
+alert("select ok");
+return true;
+}
+else
+{
+alert("select cancel");
+return false;
+}
+}
+
+ function promt(){
+ var tenure=prompt("please enter your tenure","5");
+ 
+ if(tenure !=null)
+ 
+ alert("you have entered" +tenure+" years");
+ }
+
+function alertt()
+{
+alert("okay")
+}
+
+function fact(){
+var n=prompt("pls enter your number","5");
+
+ var fact=1;
+ for(let i=1; i<=n; i++)
+ {
+ fact=fact*i;
+ 
+ }
+ alert(n+" factorial is: "+ fact); 
+}
+
+ function cal(){
+   var choice=prompt("1.add\n"+"2.sub\n"+"3.mutiply\n"+"4.divide\n"+"enter your n: ");
+   
+   
+   
+   switch(choice){
+   case "1":
+     var a=parseInt(prompt("enter your number a: "));
+     var b=parseInt(prompt("enter your number b: "));
+     var sum=a+b;
+        alert("sum is: "+sum);
+  break;
+   
+   
+   case "2":
+     var a=parseInt(prompt("enter your number a: "));
+     var b=parseInt(prompt("ener your number b: "));
+     var sub=a-b;
+        alert("sub is: "+sub);
+  break;
+   
+   case "3":
+     var a=parseInt(prompt("enter your number a: "));
+	 var b= parseInt(prompt("enter your number b: "));
+	 var multiply=a*b;
+	   alert("multiply is: "+multiply);
+  break;
+  
+ 
+	
+	
+  break;
+  case "4":
+    var a=parseInt(prompt("Enter your number a: "));
+    var b=parseInt(prompt("Enter your number b: "));
+    var div=a/b;
+    alert("div is: "+div);
+break;
+	}
+}
+	
+  
+	   
+	   
+
+</script>
+</body>
+</html>

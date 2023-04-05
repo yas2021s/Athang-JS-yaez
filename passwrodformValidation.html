@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<linK rel="stylesheet" href="form.css" type="text/css">
+</head>
+<body>
+<center>
+ <FORM NAME="myForm" onsubmit="verifyPassword()">
+ 
+<label>password</label><br>
+<input type="password" id="Pswd"><br><br>
+
+<label>confirm password</label><br>
+<input type="password" id="cnpwd"><br><br>
+
+<input type="submit" value="submit"><br><br>
+
+<button type="text" value="reset" >reset</button>
+</FORM>
+</center>
+<script>
+
+      function verifyPassword()
+	    {
+	  
+             let y=document.getElementById("Pswd").value;
+             let x=document.getElementById("cnpwd").value;
+
+            if(y=="" || x=="")
+			      {
+			
+                      alert("enter your password");
+				  } 
+				  
+            else
+			 {
+			   if(y==x)
+			      {
+				     alert("password is correct");
+				  }
+
+              else
+			     {
+			     alert("password is incorrect");
+			    }
+             }
+         }    
+
+</script>
+</body>
+</html>

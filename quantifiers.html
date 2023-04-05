@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<HTML>
+<head>
+<title>Regular expression</title>
+<h2>quantifiers</h2>
+</head>
+<body>
+<script>
+     var string="Pashi contact number is 1011011010. His age is 35.Apple,Pineappple plum";
+	 string +="Dema contact number is 8912398912.His age is 45 RegExp";
+	 
+	 
+	 //USING regExp construction
+	 
+     // var reg=new RegExp("^p","i");
+	 
+	// var reg=new RegExp("\\p$","g");
+	 //var reg=new RegExp("\\p*","i");
+	  var reg=new RegExp("[a-z]","g");
+	 document.write(string.match(reg));
+	 
+	 
+	 
+	//USING regExp literal
+	
+	// var regexliteral=/^p/i;
+	 //var regexliteral=/p$/g;
+	 //var regexliteral=/\p+/g;
+	 //var regexliteral=/\p*/g;
+	 //var regexliteral=/\p?/g;
+	 //var regexliteral=/p{2}/g;//{N}
+	 //var regexliteral=/\p{2,3}/g;
+	 //var regexliteral=/\p{2,}/g;
+	 document.write(string.match(regexliteral))
+	 
+	 
+	 </script>
+	</body>
+</html>

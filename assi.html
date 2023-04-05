@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>javasc.html</title>
+</head>
+<body>
+
+
+
+
+<p>Here some example of HTML events</p>
+<ul type="circle">
+<li>An html web page has finished loading</li>
+<li>An html input field was changed</li>
+<li>An html button was clicked</li>
+</ul>
+<p>HTML allows event handler attributes, with javascript code, to be added to html elements.</p>
+
+<h2>Common HTML events</h2>
+
+<table border="1">
+<tr>
+<td>event</td>
+<td>description</td>
+</tr>
+<tr>
+<td>onchange</td>
+<td>An HTML element has been changed</td>
+</tr>
+<tr>
+<td>onclick</td>
+<td>The user clicks an html element</td>
+</tr>
+</table>
+<p>Regualr expressions are the patterns used to match character combination in strings.</p>
+ 
+<br>
+<br>
+<br>
+<br>
+<script type="text/javascript">
+
+
+
+//using for loop
+var n='i love js'
+for(i=0; i<5; i++)
+//for(i=0; i<=5; i++) then your output will be 6
+document.write(n+'<br>'+'<br>'+'<br>');
+
+//using while loop
+var fact=1,m=5;
+while(m>0)
+{
+fact=fact*m;
+m--;
+}
+document.write("<br>fact is: "+fact);
+
+
+//n value
+var sum=0; i; n=100;
+for(i=1;i<=n;i++)
+//difference b/w inside for loop{coding} and without for loop(without bracket){}:-
+{
+sum+=i;
+document.write('n is:'+n+'<br>'+' sum of n natural number is: '+sum);
+/* i=1 sum=0 n=100
+i<=n
+sum=0+1=1
+sum is 1
+i=2 sum=1 
+2<=n
+sum=1+2=3
+sum is 3
+*/
+}
+
+document.write("n is:"+n+"<br>"+" sum of n natural number is: "+sum);
+
+
+
+
+</SCRIPT>
+</body>
+</html>

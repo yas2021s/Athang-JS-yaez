@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+<p id="demo"></p>
+<p id="join"></p>
+
+<script type="text/javascript">
+const name=["pema","yiga","yaez","gazam"];
+     /* name.pop(); //pop() method removes the last element from an array.
+	  //name.push("oppa"); //pusH()  method adds an element to the array.
+	  //name.shift();// method removes the first element from array
+	  let nLen= name.length;
+	  for(let i=0; i<nLen; i++){
+	  document.write(name[i]+"<br>");
+	 }
+	 */
+document.getElementById("demo").innerHTML=name.toString();/*The js method toString () 
+converts  an array to a string of (comma separated)array value.*/
+document.getElementById("join").innerHTML=name.join("*");/*the join() method behaves just like tostring ()
+but in addition you can specify separator.*/
+
+
+
+
+
+const arr1=["hi","meow"];
+const arr2=[1,2,3];
+const arr3=arr1.concat(arr2);
+
+document.write(arr3);
+
+</script>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html> 
+<html>
+<head>
+<title>validation form
+</title>f
+</head>
+<body>
+	<div class="container">
+	
+	<form>
+	<form name="myForm" id="myForm" action="" onsubmit="validation();"> 
+		<table>
+			<tr>
+				<td align="right">Name</td>
+				 <td border="1px"><input type="text" name="name" id="name"></td>
+			 </tr>
+			 <tr>
+				<td align="right">Student no</td>
+				 <td border="1px"><input type="text" name="student" id="student"></td>
+			 </tr>
+			 <tr>
+				<td align="right">EMail</td>
+				 <td border="1px"><input type="email" name="email" id="email"></td>
+			 </tr>
+			 <tr>
+				<td align="right">Semester:</td>
+				<td border="1px">
+					<select name="Semster" id="semster">
+					<option value="-1">Choose your semester</option>
+					<option value="0">Year I, Semester I</option>
+					<option value="1">Year I, Semester II</option>
+					<option value="2">Year II, Semester I</option>
+					<option value="3">Year II, Semester II</option>
+					<option value="4">Year III, Semester I</option>
+					<option value="5">Year III, Semester II</option>
+			
+		<input type = "submit" name="submit" value = "Submit for grading"/>
+
+	
+	
+	<br><br/><textarea name="textarea" cols="100" rows="5" id="result"></textarea>
+
+	<form>
+
+
+<script>
+function validation() 
+{
+	var name=document.forms["myForm"]["name"].value;
+	var fullname=name.split(' ');
+	var fname=fullname[0];
+	var student=document.forms["myForm"]["student"].value;
+	var email=document.forms["myForm"]["email"].value;
+	var semster=document.forms["myForm"]["semster"].value;
+	var q4=document.forms["myForm"]["q4"].value;
+    var q5=document.forms["myForm"]["q5"].value;
+	var q6=document.forms["myForm"]["q6"].value;
+	var q7=document.forms["myForm"]["q7"].value;
+	var q8=document.forms["myForm"]["q8"].value;
+  if(name=="" || !isNaN(name))
+  {
+	alert("Please Enter Your Name and it Should not be number");
+	return false;
+  }
+else if(student=="" ||isNaN(student))
+  {
+	alert("Please enter your student number. It should be number");
+	return false;
+  }
+  else if(email=="")
+  {
+	alert("Please enter your EMail");
+	return false;
+  }
+  else if(semster==1)
+  {
+	alert("Please select your semester");
+	return false;
+  }
+  }
+ 
+</script>
+</body>
+</html>

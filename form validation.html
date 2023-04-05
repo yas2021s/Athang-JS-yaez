@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Form validation</title> 
+<p>it is technical term  to check wheteher to validate data is right form or not</p>
+<p>Two use of form validation:</p>
+<h3>security measurement</h3>
+<h3>data integrity</h3>
+<h2>Two type of form validation</h2>
+<h3>-basic form validation</h3>
+<h3>-data format</h3>
+</head>
+<body>
+<FORM NAME="myForm" onsubmit="formValidat()">
+<label>Name</label>
+<input type="text" id="name">
+<input type="submit" value="submit form">
+</FORM>
+
+<script>
+/*function formValidat(){
+  if(document.myForm.name.value=="")
+  {
+  alert("enter your name");
+  }
+  }
+  */
+  
+  function formValidat(){
+  if(document.getElementById('name').value=="")
+  {
+  alert("enter your name");
+  }
+  }
+ 
+
+  </script>
+</body>
+</html>

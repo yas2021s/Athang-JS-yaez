@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+
+
+<button onclick="cal()">calculation</button>
+<script>
+
+function cal(){
+   var choice=prompt("1.add\n"+"2.sub\n"+"3.multiply\n"+"4.divide\n"+"enter your choice: ");  
+if(choice==1)
+{
+    var a=parseInt(prompt("Enter your number a: "));
+    var b=parseInt(prompt("Enter your number b: "));
+    var sum=a+b;
+    alert("sum is: "+sum);
+}
+  
+else if(choice==2)
+{
+    var a=parseInt(prompt("Enter your number a: "));
+    var b=parseInt(prompt("Enter your number b: "));
+    var sub=a-b;
+    alert("sub is: "+sub);
+}
+ 
+else if(choice==3)
+{
+    var a=parseInt(prompt("Enter your number a: "));
+    var b=parseInt(prompt("Enter your number b: "));
+    var mul=a*b;
+    alert("mul is: "+mul);
+}
+  
+else if(choice==4)
+{
+    var a=parseInt(prompt("Enter your number a: "));
+    var b=parseInt(prompt("Enter your number b: "));
+    var div=a/b;
+    alert("div is: "+div);
+}
+ }
+ </script>
+ </body>
+ </html>

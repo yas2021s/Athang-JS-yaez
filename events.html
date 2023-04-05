@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>events</title>
+</head>
+<body onload="myfunction()">
+<label>first name</label>
+<input type="text" id="fname" onkeyup="validatef('fname')" onblur="validatef('fname')"><br><br>
+<label>last name</label>
+<input type="text" id="lname" onkeyup="validatef('lname')" onblur="validatef('lname')"><br><br>
+<input type="button" value="click me" id="btn"
+onmouseover="changeColoronmouseover()" onmouseout="changeColoronmouseout()" ondblclick="changedb()"><br>
+<br><input type="submit" value="submit" id="sub" onclick="return subfun()">
+<script type="text/javascript">
+function changeColoronmouseover()
+{
+var control=document.getElementById("btn");
+control.style.background="red";
+control.style.color="yellow";
+}
+function changeColoronmouseout()
+{
+var control=document.getElementById("btn");
+control.style.background="black";
+control.style.color="white";
+}
+function myfunction()
+{
+alert("welcome to my page");
+}
+
+function changedb()
+{
+var control=document.getElementById("btn");
+control.style.background='blue';
+control.style.color='white';
+}
+function subfun()
+{
+if(confirm("are you sure you want to confirm"))
+{
+alert("select ok");
+return true;
+}
+
+else
+{
+alert("select cancel");
+return false;
+}
+}
+function validatef(controlId)
+{
+var control=document.getElementById(controlId);
+control.style.color='white';
+if(control.value =="")
+{
+control.style.background='red';
+}
+else{
+control.style.background='green';
+}
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Events Handling</title>
+
+</head>
+<body>
+<P>SPECIAL METHODS</p>
+<input type="button" id="btn" value="click me">
+<input type="button" onclick="removeEvent()" value="remove Event Listener">
+<input type="button" onclick="addEvent()" value="add Event Listener">
+<script type="text/javascript">
+
+
+   btn.addEventListener("mouseover",changeOnMouseOver);
+   btn.addEventListener("mouseout",changeOnMouseOut);
+   
+  function changeOnMouseOver(){
+   this.style.background="red";
+   this.style.color="yellow";
+   }
+   function changeOnMouseOut(){
+    this.style.background="black";
+	this.style.color="white";
+	}
+   function removeEvent()
+{
+  btn.removeEventListener("mouseover",changeOnMouseOver);
+  btn.removeEventListener("mouseout",changeOnMouseOut);
+  }
+  function addEvent(){
+  btn.addEventListener("mouseover",changeOnMouseOver);
+  btn.addEventListener("mouseout",changeOnMouseOut);
+  }
+  </SCRIPT>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>bill</title>
+
+</head>
+<body>
+<table>
+<tr>
+<th>Items</th>
+<th>Price</th>
+<th>Quantity</th>
+</tr>
+<tr>
+<td>Potatoes</td>
+<td>100</td>
+ <td><input type="number" id="potatoes"></td>
+ </tr>
+ <td>chicken</td>
+<td>200</td>
+ <td><input type="number" id="chic"></td>
+ </tr>
+ <td>mushroom</td>
+<td>190</td>
+ <td><input type="number" id="mush"></td>
+ </tr>
+ </table>
+ <input type="button" value="total cost" onclick="totalCost()">
+ <input type="text" id="cost" size="5" onfocus="this.blur()">
+ <script>
+ function totalCost()
+ {
+ var potatoes=document.getElementById("potatoes").value;
+ var chic=document.getElementById("chic").value;
+ var mush=document.getElementById("mush").value;
+ 
+ document.getElementById("cost").value=potatoes*100+chic*200+mush*190;
+ }
+ </script>
+</body>
+
+<html>

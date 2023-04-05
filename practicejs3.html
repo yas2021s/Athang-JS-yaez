@@ -1,0 +1,71 @@
+<DOCTYPE html>
+<head>
+</head>
+<body>
+<p id="demo"></P>
+<script type="text/javascript">
+document.getElementById("demo").innerHTML=Boolean(10>9);
+document.write("hello");
+//alert("this is alert command");
+
+/*function confrm()
+{
+confirm("do you want to confirm");
+}
+
+function promt(){
+
+}
+
+var x=100;
+document.write(x);
+x=42;
+document.write(x);
+*/
+var num=10, nuM=20;
+num=++nuM;//pre increment/before
+document.write("<br>" +num);
+document.write("<br>" +nuM);
+
+var num=10, nuM=20;
+num=nuM++;//post/after increment
+document.write("<br>" +num);
+document.write("<br>" +nuM);
+
+var num=10, nuM=20;
+nuM=++num;
+document.write("<br>" +num);
+document.write("<br>" +nuM);
+
+
+var status=3;
+if(status==1){
+document.write("online");
+}
+else if(status==2){
+document.write("awat");
+}
+else{
+document.write("offline");
+}
+
+
+    var color=prompt("do you like blue and red?");
+switch(color){
+
+case "blue":
+   document.write("this is blue");
+break;
+
+case "red":
+   document.write("this is red");
+break;
+
+default:
+   document.write("color not found");
+}
+
+
+</script>
+</body>
+</html>

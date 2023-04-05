@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+<head>
+<title>DOM</title>
+</head>
+<body>
+	<input type="button" value="clickme" id="btn"/>
+	<script>
+	document.getElementById("btn").onmouseover=changeColorOnMouseOver;
+	document.getElementById("btn").onmouseout=changeColorOnMouseOut;
+	
+	function changeColorOnMouseOver()
+	{
+	  this.style.background="red";
+	  this.style.color="yellow";
+	}
+	function changeColorOnMouseOut()
+	{
+	  this.style.background="black";
+	  this.style.color="white";
+	}
+	</script>
+	
+</body>
+</html>

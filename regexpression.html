@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+<HTML>
+<head>
+<title>Regular expression</title>
+</head>
+<body>
+<script>
+     var string="Tashi contact number is 1011011010. His age is 35.";
+	 string +="Pema contact number is 8912398912.His age is 45";
+	 var regxli=/Pema/g;
+	 document.write(string.replace(regxli,"Dorji"));
+	 document.write("<br>");
+	 
+	 
+	 var reg=new RegExp("\\D+","g");
+	 
+	 document.write(string.replace(reg,"hello"));
+	 
+	 
+	 </script>
+	</body>
+</html>
